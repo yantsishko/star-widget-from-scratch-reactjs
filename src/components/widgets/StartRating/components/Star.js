@@ -17,12 +17,12 @@ function Star({ value }) {
   return (
     <div
       className="star"
-      onClick={() => setRating(value)}
-      onMouseEnter={() => setHover(value)}
-      onMouseLeave={() => setHover(null)}
+      data-star={value}
+      onClick={setRating}
+      onMouseEnter={setHover}
+      onMouseLeave={setHover}
     >
       <svg
-        data-rating={value}
         fill={value <= (hover || rating) ? fillColor : emptyColor}
         height={height}
         viewBox="0 0 25 25"
