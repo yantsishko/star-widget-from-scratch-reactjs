@@ -23,6 +23,7 @@ export default function StarRating({
 
   const setRatingFn = (e) => {
     if (readOnly) return;
+
     const value = e.currentTarget.dataset.star;
 
     setRating(value);
